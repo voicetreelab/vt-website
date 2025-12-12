@@ -1,0 +1,5 @@
+# Voicetree robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://voicetree.io/sitemap.xml

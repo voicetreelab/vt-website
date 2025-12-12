@@ -1,18 +1,39 @@
-# Quartz v4
+# VoiceTree Website
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+Website for [voicetree.io](https://voicetree.io), built with [Quartz v4](https://quartz.jzhao.xyz/).
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
-Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility and ease-of-use.
+## Development
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+```bash
+# Install dependencies
+npm install
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+# Start local dev server
+npx quartz build --serve
 
-## Sponsors
+# Build for production
+npx quartz build
+```
 
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+## Deployment to Netlify
+
+This site is configured for automatic deployment via Netlify. **Just push to main:**
+
+```bash
+git push origin main
+```
+
+Netlify will automatically:
+1. Detect the push
+2. Run `npx quartz build`
+3. Deploy the `public/` folder
+
+Configuration is in `netlify.toml`.
+
+## Adding Content
+
+Add markdown files to the `content/` folder. They will be automatically built and deployed on push.
+
+---
+
+Built with [Quartz v4](https://quartz.jzhao.xyz/) - a tool for publishing digital gardens.

@@ -1,0 +1,26 @@
+.DS_Store
+node_modules
+prof
+tsconfig.tsbuildinfo
+.obsidian
+.quartz-cache
+private/
+.replit
+replit.nix
+
+# IDE
+.idea/
+
+# Build output (Netlify builds this)
+public/
+
+# VoiceTree working directories
+friday/
+voicetree/
+
+# Temp/test files
+qna_candidates.txt
+test-screenshot.png
+test-site.mjs
+*.new
+*.bak
