@@ -1,6 +1,15 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
+const hiddenBlogSlugs = new Set([
+  "blog/90-percent-token-reduction",
+  "blog/From-RAG-to-PAG",
+  "blog/Managing-Multiple-AI-Agents",
+])
+
+const explorerFilterFn = (node: any) =>
+  node.slugSegment !== "tags" && !(node.isFolder ? false : hiddenBlogSlugs.has(node.slug))
+
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
@@ -9,6 +18,27 @@ export const sharedPageComponents: SharedLayout = {
   footer: Component.Footer({
     links: {},
   }),
+}
+
+// Custom sort function for Explorer - sorts by priority frontmatter
+const explorerSortFn = (a: any, b: any) => {
+  // Sort by priority if available (lower number = higher priority)
+  const priorityA = a.file?.frontmatter?.priority
+  const priorityB = b.file?.frontmatter?.priority
+  if (priorityA !== undefined && priorityB !== undefined) {
+    return priorityA - priorityB
+  }
+  if (priorityA !== undefined) return -1
+  if (priorityB !== undefined) return 1
+  // Fall back to alphabetical for non-prioritized items
+  if ((!a.isFolder && !b.isFolder) || (a.isFolder && b.isFolder)) {
+    return a.displayName.localeCompare(b.displayName, undefined, {
+      numeric: true,
+      sensitivity: "base",
+    })
+  }
+  if (!a.isFolder && b.isFolder) return 1
+  return -1
 }
 
 // components for pages that display a single page (e.g. a single note)
@@ -38,10 +68,9 @@ export const defaultContentPageLayout: PageLayout = {
           grow: true,
         },
         { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({ sortFn: explorerSortFn, filterFn: explorerFilterFn }),
   ],
   right: [
     Component.ConditionalRender({
@@ -68,7 +97,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({ sortFn: explorerSortFn, filterFn: explorerFilterFn }),
   ],
   right: [],
 }

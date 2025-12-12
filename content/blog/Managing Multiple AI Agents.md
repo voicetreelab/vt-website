@@ -1,6 +1,7 @@
 ---
 title: "Managing 6+ AI Agents Simultaneously: A Workspace Architecture That Scales"
 description: As AI agents handle longer tasks autonomously, the bottleneck shifts from execution to human coordination. With n agents in parallel, context switching grows quadratically. The solution is a shared tree workspace where agents are landmarks, not terminal tabs.
+priority: 5
 ---
 
 Last week I ran six coding agents in parallel across a complex refactor. I finished in four hours what would have taken two days solo. The week before that, I tried the same thing with three agents and created a mess that took me longer to untangle than doing it myself.

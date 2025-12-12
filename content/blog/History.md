@@ -1,3 +1,9 @@
+---
+title: History of Voicetree
+description: The journey of building Voicetree from a productivity tool for knowledge workers to an AI agent orchestration platform. Learn about our breakthroughs in context engineering and agent coordination.
+priority: 7
+---
+
 VoiceTree started out as a productivity tool for knowledge workers. It was designed to encourage a system of work called "Voice Work", where you speak your decision and problem solving process out loud. The VoiceTree would allow you to externalize your short term memory, decreasing cognitive load, thereby allowing you to stay in the flow state longer, and solve harder problems.
 
 - Early 2024, work on VoiceTree commenced after being frustrated with the extent of context you have to manage for software engineering. It was too easy to lose track, drop the 5 balls you were juggling, and in defeat check slack. Too much time was spent figuring out what to do, not doing. 
