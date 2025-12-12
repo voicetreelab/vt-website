@@ -1,0 +1,9 @@
+/* Hide the entire site footer */
+.site-footer {
+    display: none;
+}
+
+/* Or if you want to hide just specific parts: */
+.site-footer-container {
+    display: none;
+}

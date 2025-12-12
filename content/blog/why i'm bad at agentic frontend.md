@@ -1,0 +1,6 @@
+- complexity threshold not yet known
+- trying to do too much at once
+- not finishing off a task provably green (checkpoints)
+- DIDN"T HAVE A PLAN
+- I wasn't usiing playright (tests and MCP :o)
+- unit tests are a waste of tiime
