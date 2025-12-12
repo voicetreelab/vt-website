@@ -82,6 +82,7 @@ export default (() => {
           </>
         )}
 
+        <link rel="icon" type="image/png" sizes="32x32" href={joinSegments(baseDir, "static/favicon-32x32.png")} />
         <link rel="icon" href={iconPath} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
