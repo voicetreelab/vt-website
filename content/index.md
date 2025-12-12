@@ -1,3 +1,8 @@
+---
+title: Voicetree
+hideGraph: true
+---
+
 ## An Infinite Canvas for Orchestrating Coding Agents
 ### Effortlessly organise your ideas into a concept graph for flow-state context engineering 
 

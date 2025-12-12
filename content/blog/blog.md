@@ -1,1 +1,0 @@
-The only rational philosophy is explicitly optimising inclusive fitness 
