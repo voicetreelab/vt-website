@@ -1,14 +1,16 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
-const hiddenBlogSlugs = new Set([
-  "blog/90-percent-token-reduction",
-  "blog/From-RAG-to-PAG",
-  "blog/Managing-Multiple-AI-Agents",
-])
-
-const explorerFilterFn = (node: any) =>
-  node.slugSegment !== "tags" && !(node.isFolder ? false : hiddenBlogSlugs.has(node.slug))
+// Filter function for Explorer - hides tags and specific blog posts
+// Note: Must be self-contained (no external variables) because it's serialized to client
+const explorerFilterFn = (node: any) => {
+  const hiddenSlugs = new Set([
+    "blog/90-percent-token-reduction",
+    "blog/From-RAG-to-PAG",
+    "blog/Managing-Multiple-AI-Agents",
+  ])
+  return node.slugSegment !== "tags" && !(node.isFolder ? false : hiddenSlugs.has(node.slug))
+}
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
