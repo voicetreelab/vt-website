@@ -2,6 +2,7 @@
 title: "From RAG to PAG: Why Pruning-Augmented Generation Preserves What Retrieval Destroys"
 description: RAG treats context as disconnected chunks and fails on deep reasoning. PAG (Pruning-Augmented Generation) preserves semantic relationships through hierarchical tree navigation. A paradigm shift from "retrieve chunks" to "navigate structure."
 priority: 2
+draft: true
 ---
 
 RAG is everywhere. It's the default answer when someone asks "how do I give my LLM access to documents?" But RAG has a fundamental problem that gets worse the more you need it: it destroys the relationships between pieces of information.

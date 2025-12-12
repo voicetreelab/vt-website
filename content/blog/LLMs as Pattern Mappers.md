@@ -2,6 +2,7 @@
 title: "LLMs as Pattern Mappers: A Mental Model for Agentic Engineering"
 description: A practical framework for understanding what LLMs can and cannot do, and how to convert hard problems into tasks they can solve reliably.
 priority: 3
+draft: true
 ---
 
 Last month I watched an agent spend 45 minutes confidently producing garbage. The task was straightforward: investigate why Jira's performance degraded yesterday. The agent had access to logs, metrics, and code. It produced a 2000-word report with zero actionable insights.

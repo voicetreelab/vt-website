@@ -72,7 +72,7 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer({ sortFn: explorerSortFn, filterFn: explorerFilterFn }),
+    Component.Explorer({ sortFn: explorerSortFn, filterFn: explorerFilterFn, homeLink: true }),
   ],
   right: [
     Component.ConditionalRender({
@@ -99,7 +99,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer({ sortFn: explorerSortFn, filterFn: explorerFilterFn }),
+    Component.Explorer({ sortFn: explorerSortFn, filterFn: explorerFilterFn, homeLink: true }),
   ],
   right: [],
 }

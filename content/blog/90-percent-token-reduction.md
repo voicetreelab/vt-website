@@ -2,6 +2,7 @@
 title: How We Achieved 90% Token Reduction on LLM Context Without Losing Accuracy
 description: Tree-based context pruning achieves 90% token reduction while maintaining accuracy on benchmarks where RAG fails. This isn't retrieval - it's preserving semantic relationships through hierarchical navigation.
 priority: 1
+draft: true
 ---
 
 GPT-4o drops from 99.3% to 69.7% accuracy on the [NoLiMa benchmark](https://arxiv.org/abs/2502.05167) at just 32K tokens. That's a 30-point accuracy cliff, and it happens on what OpenAI calls a "long context" model.

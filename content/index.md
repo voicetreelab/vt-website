@@ -1,6 +1,7 @@
 ---
-title: Voicetree
+title: Voicetree - Infinite Canvas for Orchestrating Coding Agents
 hideGraph: true
+description: Organize ideas into a concept graph for flow-state context engineering. Orchestrate 6+ coding agents at once with up to 60% fewer input tokens in early testing.
 ---
 
 ## An Infinite Canvas for Orchestrating Coding Agents

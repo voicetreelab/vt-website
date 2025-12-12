@@ -5,6 +5,42 @@ import { googleFontHref, googleFontSubsetHref } from "../util/theme"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { unescapeHTML } from "../util/escape"
 import { CustomOgImagesEmitterName } from "../plugins/emitters/ogImage"
+
+// JSON-LD Schema for Organization
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Voicetree",
+  "url": "https://voicetree.io",
+  "logo": "https://voicetree.io/static/icon.png",
+  "description": "An infinite canvas for orchestrating coding agents. Flow-state context engineering for developers.",
+  "email": "hello@voicetree.io",
+  "sameAs": [
+    "https://github.com/voicetreelab",
+    "https://x.com/voicetreeio"
+  ]
+}
+
+// JSON-LD Schema for SoftwareApplication
+const softwareApplicationSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Voicetree",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "macOS, Windows, Linux",
+  "description": "An infinite canvas for orchestrating coding agents. Organize your ideas into a concept graph for flow-state context engineering. Orchestrate 6+ agents at once with significantly reduced context size.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/PreOrder"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Voicetree"
+  }
+}
+
 export default (() => {
   const Head: QuartzComponent = ({
     cfg,
@@ -13,8 +49,10 @@ export default (() => {
     ctx,
   }: QuartzComponentProps) => {
     const titleSuffix = cfg.pageTitleSuffix ?? ""
-    const title =
-      (fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title) + titleSuffix
+    const isHomepage = fileData.slug === "index"
+    const pageTitle = fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title
+    // Don't add suffix to homepage (it has its own full title with tagline)
+    const title = isHomepage ? pageTitle : pageTitle + titleSuffix
     const description =
       fileData.frontmatter?.socialDescription ??
       fileData.frontmatter?.description ??
@@ -86,6 +124,16 @@ export default (() => {
         <link rel="icon" href={iconPath} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
+
+        {/* JSON-LD Structured Data for SEO and AI Search */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
+        />
 
         {css.map((resource) => CSSResourceToStyleElement(resource, true))}
         {js

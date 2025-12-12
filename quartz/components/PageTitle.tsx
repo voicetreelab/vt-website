@@ -31,9 +31,10 @@ PageTitle.css = `
 }
 
 .page-logo {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
+  background: transparent;
 }
 
 .page-title {

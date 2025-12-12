@@ -1,3 +1,8 @@
+---
+title: Privacy Policy
+description: Voicetree privacy policy explaining how we handle your data, what we collect, and our commitments to data protection. We don't sell your data or use it for advertising.
+---
+
 VoiceTree ("we", "our", "us") is committed to being transparent about how we handle your data.
 
 ## What We Collect

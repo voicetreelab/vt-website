@@ -2,6 +2,7 @@
 title: Voicetree Live Sessions
 description: Watch live recordings of engineers using Voicetree for real software development work. See how context engineering and agent orchestration works in practice.
 priority: 8
+draft: true
 ---
 
 Live recordings of our Engineers using VoiceTree for software engineering work. 

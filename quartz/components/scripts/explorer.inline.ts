@@ -8,6 +8,7 @@ interface ParsedOptions {
   folderClickBehavior: "collapse" | "link"
   folderDefaultState: "collapsed" | "open"
   useSavedState: boolean
+  homeLink: boolean
   sortFn: (a: FileTrieNode, b: FileTrieNode) => number
   filterFn: (node: FileTrieNode) => boolean
   mapFn: (node: FileTrieNode) => void
@@ -159,6 +160,7 @@ async function setupExplorer(currentSlug: FullSlug) {
       folderClickBehavior: (explorer.dataset.behavior || "collapse") as "collapse" | "link",
       folderDefaultState: (explorer.dataset.collapsed || "collapsed") as "collapsed" | "open",
       useSavedState: explorer.dataset.savestate === "true",
+      homeLink: dataFns.homeLink || false,
       order: dataFns.order || ["filter", "map", "sort"],
       sortFn: new Function("return " + (dataFns.sortFn || "undefined"))(),
       filterFn: new Function("return " + (dataFns.filterFn || "undefined"))(),
@@ -207,6 +209,25 @@ async function setupExplorer(currentSlug: FullSlug) {
 
     // Create and insert new content
     const fragment = document.createDocumentFragment()
+
+    // Add home link if enabled
+    if (opts.homeLink) {
+      const homeTemplate = document.getElementById("template-file") as HTMLTemplateElement
+      const homeClone = homeTemplate.content.cloneNode(true) as DocumentFragment
+      const homeLi = homeClone.querySelector("li") as HTMLLIElement
+      const homeA = homeLi.querySelector("a") as HTMLAnchorElement
+      homeA.href = "/"
+      homeA.dataset.for = "index"
+      homeA.textContent = "Home"
+      homeA.classList.add("home-link")
+
+      if (currentSlug === "index") {
+        homeA.classList.add("active")
+      }
+
+      fragment.appendChild(homeLi)
+    }
+
     for (const child of trie.children) {
       const node = child.isFolder
         ? createFolderNode(currentSlug, child, opts)

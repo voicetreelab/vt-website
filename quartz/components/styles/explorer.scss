@@ -146,6 +146,16 @@ button.desktop-explorer {
           color: var(--tertiary);
           border-left-color: var(--tertiary);
         }
+
+        &.home-link {
+          font-weight: $semiBoldWeight;
+          opacity: 0.85;
+          margin-bottom: 0.5rem;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
       }
     }
   }

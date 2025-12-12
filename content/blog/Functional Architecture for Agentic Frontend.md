@@ -2,6 +2,7 @@
 title: "Why Functional Architecture Makes AI Agents Actually Work (Lessons from a 20-Hour Flight)"
 description: How designing frontends with functional architecture transforms agent-generated code from spaghetti to composable, testable systems.
 priority: 6
+draft: true
 ---
 
 I had the worst week of agentic coding in my life, followed immediately by the best.

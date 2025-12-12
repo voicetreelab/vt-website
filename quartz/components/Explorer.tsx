@@ -16,6 +16,7 @@ export interface Options {
   folderDefaultState: "collapsed" | "open"
   folderClickBehavior: "collapse" | "link"
   useSavedState: boolean
+  homeLink?: boolean
   sortFn: (a: FileTrieNode, b: FileTrieNode) => number
   filterFn: (node: FileTrieNode) => boolean
   mapFn: (node: FileTrieNode) => void
@@ -26,6 +27,7 @@ const defaultOptions: Options = {
   folderDefaultState: "collapsed",
   folderClickBehavior: "link",
   useSavedState: true,
+  homeLink: false,
   mapFn: (node) => {
     return node
   },
@@ -74,6 +76,7 @@ export default ((userOpts?: Partial<Options>) => {
           sortFn: opts.sortFn.toString(),
           filterFn: opts.filterFn.toString(),
           mapFn: opts.mapFn.toString(),
+          homeLink: opts.homeLink,
         })}
       >
         <button
