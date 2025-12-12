@@ -20,9 +20,7 @@ Consider asking about a bug in your codebase. RAG might retrieve:
 
 But it won't understand that the PR discussion *resolved* the issue by changing the function, and that change introduced a *new* edge case causing your current error. That reasoning requires traversing relationships, not matching embeddings.
 
-The benchmarks confirm this. [LongBench v2](https://arxiv.org/abs/2412.15204) specifically tests multi-hop reasoning over long contexts, and RAG approaches consistently fail where they need to chain multiple pieces of information together. GPT-4o drops from 99.3% to 69.7% accuracy on [NoLiMa](https://arxiv.org/abs/2502.05167) (non-literal association finding) at just 32K tokens, even with its supposedly excellent long-context support.
-
-The attention mechanism scales quadratically. "Long context" windows don't solve the problem; they just let you fail with more tokens.
+The benchmarks confirm this. [LongBench v2](https://arxiv.org/abs/2412.15204) specifically tests multi-hop reasoning over long contexts, and RAG approaches consistently fail where they need to chain multiple pieces of information together. (For the specific numbers, see [[90-percent-token-reduction|How We Achieved 90% Token Reduction]].)
 
 ## RAG Treats Context Like Grep When It Should Be a File System
 
@@ -53,7 +51,7 @@ What's preserved that RAG loses:
 - **Sibling relationships**: Related concepts at the same level stay together
 - **Traversal paths**: The LLM can trace how it got to a piece of information
 
-This isn't a minor improvement. On [NoLiMa benchmarks](https://arxiv.org/abs/2502.05167), tree-based navigation achieves 90% token reduction while maintaining accuracy where other approaches fail. The LLM processes 80-90% fewer tokens and gets better results because it's working with structured information instead of disconnected chunks.
+This isn't a minor improvement. On standard benchmarks, tree-based navigation achieves [[90-percent-token-reduction|90% token reduction]] while maintaining accuracy where other approaches fail.
 
 ## Where PAG Beats RAG
 
@@ -100,7 +98,7 @@ The key components:
 
 This is what we're building at Voicetree. The same technology that helps humans organize their thinking turns out to be exactly what LLMs need for better context management.
 
-We've measured 90% token reduction on standard benchmarks while maintaining accuracy. More importantly, PAG succeeds on the multi-hop reasoning tasks where RAG consistently fails.
+The results speak for themselves: [[90-percent-token-reduction|90% token reduction while maintaining accuracy]]. More importantly, PAG succeeds on the multi-hop reasoning tasks where RAG consistently fails.
 
 The future isn't longer context windows. It's structured context that preserves the relationships making information useful.
 

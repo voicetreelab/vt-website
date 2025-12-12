@@ -100,3 +100,7 @@ The bottleneck in agentic development isn't agent capability. It's human coordin
 The solution isn't better orchestration frameworks. It's a shared workspace where coordination happens through structure, not code. Where agents are landmarks you navigate to, not processes you manage.
 
 Six agents feels manageable when they're locations on a map. It feels overwhelming when they're tabs in a terminal.
+
+---
+
+*Related: [[90-percent-token-reduction|How We Achieved 90% Token Reduction]] - the context engineering that makes shared workspaces possible. And [[Complexity Threshold]] - keeping each agent under the threshold that produces good work.*

@@ -101,3 +101,7 @@ Before adding [feature]:
 Most problems with agentic coding come from not accepting these limitations. The goal isn't zero complexity, but ensuring every bit of complexity earns its place in your system.
 
 Make these checks habitual. Create a checklist for every coding session. The agents are powerful - but only when you keep them under the complexity threshold.
+
+---
+
+*Related: [[LLMs as Pattern Mappers]] - the mental model that explains why complexity thresholds exist.*
