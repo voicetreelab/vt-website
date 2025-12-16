@@ -79,8 +79,14 @@ export const defaultContentPageLayout: PageLayout = {
       component: Component.Graph(),
       condition: (page) => page.fileData.frontmatter?.hideGraph !== true,
     }),
-    Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks(),
+    Component.ConditionalRender({
+      component: Component.DesktopOnly(Component.TableOfContents()),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
+    Component.ConditionalRender({
+      component: Component.Backlinks(),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
   ],
 }
 

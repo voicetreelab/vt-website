@@ -25,20 +25,21 @@ PageTitle.css = `
 
 .page-title-link {
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
   text-decoration: none;
 }
 
 .page-logo {
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
   background: transparent;
 }
 
 .page-title {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   margin: 0;
   font-family: var(--titleFont);
 }
