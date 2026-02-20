@@ -1,6 +1,6 @@
 ---
 title: Frequently Asked Questions
-description: Common questions about Voicetree - the interactive graph-view for orchestrating coding agents. Learn about context engineering, agent orchestration, and how Voicetree improves AI coding workflows.
+description: Common questions about Voicetree - the interactive graph-view for orchestrating coding agents. Learn about context engineering, voice mode, agent orchestration, supported coding agents, API cost reduction, and how Voicetree improves AI coding workflows.
 ---
 
 ## Frequently Asked Questions
@@ -40,3 +40,23 @@ Voicetree is source-available on GitHub at [voicetreelab/voicetree](https://gith
 ### How can I contact the Voicetree team?
 
 Join our [Discord](https://discord.gg/r2ZBtJ9zvk) for questions and feedback, or email us at hello@voicetree.io.
+
+### What can I use Voicetree for?
+
+Common use cases include: orchestrating multi-file refactors across parallel agents, breaking complex features into dependency graphs that agents work through, planning architecture with voice-to-graph before delegating implementation, and building project knowledge bases that agents share. Any workflow where you need multiple agents coordinated around shared context benefits.
+
+### What is voice mode in Voicetree?
+
+Voice mode lets you speak your thoughts and Voicetree structures them into a graph in ~15 seconds. Speaking activates deliberate (System 2) thinking — Japanese train conductors use "point and calling" to reduce errors by 85% for the same reason. The graph holds your reasoning chain so you can go arbitrarily deep without losing track.
+
+### How does Voicetree reduce AI API costs?
+
+Voicetree's context engineering prunes what agents see to only nearby relevant nodes instead of full conversation histories — averaging 60% fewer input tokens per request. Focused context also improves agent accuracy by avoiding the 30–60% performance degradation caused by context rot in long prompts. Your API subscription lasts longer and works better.
+
+### Which coding agents work with Voicetree?
+
+Voicetree works with any terminal-based coding agent: Claude Code, OpenAI Codex, Gemini CLI, OpenCode, and others. Agents run as native terminals embedded in the graph — you keep your existing settings, configs, and workflows. Voicetree doesn't replace your agent; it gives your agent spatial context and orchestration.
+
+### How does Voicetree help with large projects?
+
+As projects grow, Voicetree scales by leveraging spatial memory — your brain's most efficient recall mechanism. Each node represents a concept at any abstraction level, and the graph structure mirrors your mental model. Agents decompose tasks into subgraphs, and you navigate progress like a map instead of scrolling through terminal tabs. No cold starts — return after days and instantly see where everything stands.
