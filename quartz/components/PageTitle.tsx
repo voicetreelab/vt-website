@@ -7,7 +7,7 @@ import { joinSegments } from "../util/path"
 const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzComponentProps) => {
   const title = cfg?.pageTitle ?? i18n(cfg.locale).propertyDefaults.title
   const baseDir = pathToRoot(fileData.slug!)
-  const logoPath = joinSegments(baseDir, "static/tree.png")
+  const logoPath = joinSegments(baseDir, "static/logo-hand-clean.png")
   return (
     <div class={classNames(displayClass, "page-title-container")}>
       <a href={baseDir} class="page-title-link">
@@ -33,7 +33,8 @@ PageTitle.css = `
 
 .page-logo {
   width: 100%;
-  height: 100%;
+  max-width: 120px;
+  height: auto;
   object-fit: contain;
   background: transparent;
 }
