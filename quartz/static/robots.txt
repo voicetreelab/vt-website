@@ -1,4 +1,4 @@
-# Voicetree robots.txt
+# Voicetree robots.txt — all bots welcome
 User-agent: *
 Allow: /
 

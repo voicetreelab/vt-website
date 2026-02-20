@@ -32,3 +32,7 @@ content/chromadb_data/
 # VoiceTree workspaces
 voicetree-*/
 
+
+# Local Netlify folder
+.netlify
+mockup-homepage.html

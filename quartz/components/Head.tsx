@@ -13,11 +13,12 @@ const organizationSchema = {
   "name": "Voicetree",
   "url": "https://voicetree.io",
   "logo": "https://voicetree.io/static/icon.png",
-  "description": "An infinite canvas for orchestrating coding agents. Flow-state context engineering for developers.",
+  "description": "An interactive graph-view for orchestrating coding agents. Your agents share the same memory graph and can recursively spawn subagents.",
   "email": "hello@voicetree.io",
   "sameAs": [
     "https://github.com/voicetreelab",
-    "https://x.com/voicetreeio"
+    "https://x.com/voicetreeio",
+    "https://discord.gg/r2ZBtJ9zvk"
   ]
 }
 
@@ -28,12 +29,12 @@ const softwareApplicationSchema = {
   "name": "Voicetree",
   "applicationCategory": "DeveloperApplication",
   "operatingSystem": "macOS, Windows, Linux",
-  "description": "An infinite canvas for orchestrating coding agents. Organize your ideas into a concept graph for flow-state context engineering. Orchestrate 6+ agents at once with significantly reduced context size.",
+  "description": "An interactive graph-view where nodes are markdown notes or terminal-based agents. Agents share your memory graph, see nearby nodes as context, and can recursively spawn subagents.",
   "offers": {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD",
-    "availability": "https://schema.org/PreOrder"
+    "availability": "https://schema.org/InStock"
   },
   "publisher": {
     "@type": "Organization",
