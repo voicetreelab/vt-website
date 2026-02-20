@@ -8,7 +8,7 @@ draft: true
 So we built https://github.com/voicetreelab/lazy-mcp/ to solve it.
 
 Previously 18% of my Claude context window was spent on the instructions for two MCP tools, Serena and Playwright. Unbelievable.
-![[Pasted image 20251012175335.png]]
+![[Pasted image 20251012175335.png|Claude context usage showing 18% consumed by MCP tool descriptions for Serena and Playwright]]
 
 That's an insane amount of context bloat to be included in every single message I send to Claude. 99% of the time Claude doesn't actually need to have detailed instructions for when and how to call `serena_get_current_config()`, so it wasted.
 
@@ -26,7 +26,7 @@ then the lazy-mcp server itself will have two meta-tools:
 
 Here's our context window now:
 
-![[Pasted image 20251012180310.png]]
+![[Pasted image 20251012180310.png|Claude context usage after lazy-mcp: MCP tools reduced to 0.9% with only 3 proxy tools loaded]]
 
 
 EXAMPLE TREE STRUCT
@@ -106,4 +106,4 @@ execute_tool(coding_tools.serena.search.search_symbol("manu"))
 
 here's claude using it:
 
-![[Pasted image 20251012180507.png]]
+![[Pasted image 20251012180507.png|Claude using lazy-mcp proxy to browse tool categories and discover available tools on demand]]

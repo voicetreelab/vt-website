@@ -43,7 +43,7 @@ When you flatten this into chunks and retrieve by similarity, you destroy the st
 Pruning-Augmented Generation takes a different approach. Instead of retrieving chunks, it navigates structure. We call it PAG because the core operation is *pruning* irrelevant branches while preserving structure—the inverse of RAG's additive retrieval.
 
 The process:
-1. Convert content into a hierarchical tree (we call this a VoiceTree)
+1. Convert content into a hierarchical tree (we call this a Voicetree)
 2. For any query, prune irrelevant branches
 3. Navigate remaining structure with progressive disclosure: titles first, then summaries, then full content
 4. LLM traverses the tree like browsing directories, requesting more detail where needed
@@ -106,4 +106,4 @@ The future isn't longer context windows. It's structured context that preserves 
 
 ---
 
-If you're interested in exploring PAG for your applications, we're building this into Voicetree. [Join the waitlist](https://forms.gle/H4sWKnWqZNRjWNkp6) to try it.
+If you're interested in exploring PAG for your applications, we're building this into Voicetree. [Download it here](/download) — it's free and open source.

@@ -1,5 +1,5 @@
 [build]
-  command = "npx quartz build && cp public/static/robots.txt public/robots.txt && cp public/static/llms.txt public/llms.txt"
+  command = "npx quartz build && cp public/static/robots.txt public/robots.txt"
   publish = "public"
 
 [build.environment]

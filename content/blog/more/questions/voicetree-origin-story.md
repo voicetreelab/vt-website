@@ -1,13 +1,13 @@
 ---
-title: Why was VoiceTree built?
-description: VoiceTree was built to let you explain work out loud while AI agents handle implementation. Focus on architecting while coding agents do the painful parts.
+title: Why was Voicetree built?
+description: Voicetree was built to let you explain work out loud while AI agents handle implementation. Focus on architecting while coding agents do the painful parts.
 tags:
   - voicetree
   - origin-story
   - vision
 ---
 
-## Why was VoiceTree built?
+## Why was Voicetree built?
 
 When AI agents started getting good, I dreamed: **What if I could just explain my work out loud and agents would do the implementation?**
 
@@ -21,7 +21,7 @@ When AI agents started getting good, I dreamed: **What if I could just explain m
 
 Working on Jira's performance team at Atlassian was an amazing experience - exceptional teammates to learn from and a lab to experiment in.
 
-Not just with systems at scale, but with **how I work**. When AI agents started getting good, I started experimenting with multi-agent workflows.
+Not just with systems at scale, but with **how I work**. When AI agents started getting good, I started experimenting with multi-agent workflows. Using early versions of Voicetree, I built a performance engineering investigation agent framework that went into production for millions of users and saved millions in AWS costs.
 
 ### The Problem Discovered
 
@@ -35,7 +35,7 @@ Each agent needs:
 
 ### The Solution
 
-VoiceTree provides:
+Voicetree provides:
 - Voice input to externalize thinking fast
 - Automatic tree construction to organize context
 - Agent launching on any node

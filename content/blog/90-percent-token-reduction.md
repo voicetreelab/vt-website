@@ -21,7 +21,7 @@ This isn't a temporary limitation waiting for better hardware. It's architectura
 
 The obvious solution is RAG: break documents into chunks, embed them, retrieve relevant pieces. But [LongBench v2](https://arxiv.org/abs/2412.15204) showed RAG breaks on multi-hop reasoning - when answers require connecting information across chunks, retrieval falls apart.
 
-The fundamental problem: retrieving chunks destroys the relationships between them. (For a deeper dive on this paradigm shift, see [[From RAG to PAG|From RAG to PAG: Why Pruning Beats Retrieval]].)
+The fundamental problem: retrieving chunks destroys the relationships between them. (For a deeper dive on this paradigm shift, see [[from-rag-to-pag|From RAG to PAG: Why Pruning Beats Retrieval]].)
 
 ## Tree-Based Context Navigation
 
@@ -79,6 +79,6 @@ The benchmarks are clear: long context isn't working. The alternative is structu
 
 ---
 
-*VoiceTree is building tools for context engineering - managing what information LLMs see and when. [Watch the demo](https://youtu.be/h_JtlkDhNTI) or [join the alpha](https://forms.gle/H4sWKnWqZNRjWNkp6).*
+*Voicetree is building tools for context engineering — managing what information LLMs see and when. [Watch the demo](https://youtu.be/h_JtlkDhNTI) or [download it here](/download) — it's free and open source.*
 
-*Related: [[From RAG to PAG]] - the paradigm shift from retrieval to pruning.*
+*Related: [[from-rag-to-pag|From RAG to PAG]] - the paradigm shift from retrieval to pruning.*

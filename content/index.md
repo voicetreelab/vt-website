@@ -20,7 +20,7 @@ description: Save your project memories as a network of Markdown files. Delegate
 
 <div class="hero-video">
 
-![](https://youtu.be/h_JtlkDhNTI)
+![Voicetree demo: multi-agent orchestration on a spatial canvas](https://youtu.be/h_JtlkDhNTI)
 
 </div>
 
@@ -38,7 +38,7 @@ description: Save your project memories as a network of Markdown files. Delegate
 
 <div class="video-section">
 
-![](https://www.youtube.com/watch?v=a8S5YQE0Vkw)
+![Voicetree interactive graph view: building connections and structuring ideas in real-time](https://www.youtube.com/watch?v=a8S5YQE0Vkw)
 
 </div>
 

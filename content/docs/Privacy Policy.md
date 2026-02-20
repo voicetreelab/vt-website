@@ -3,11 +3,11 @@ title: Privacy Policy
 description: Voicetree privacy policy explaining how we handle your data, what we collect, and our commitments to data protection. We don't sell your data or use it for advertising.
 ---
 
-VoiceTree ("we", "our", "us") is committed to being transparent about how we handle your data.
+Voicetree ("we", "our", "us") is committed to being transparent about how we handle your data.
 
 ## What We Collect
 
-**Usage Analytics**: We use PostHog to collect anonymous usage analytics, including features used, session duration, and general interaction patterns. This helps us understand how people use VoiceTree and where we can improve.
+**Usage Analytics**: We use PostHog to collect anonymous usage analytics, including features used, session duration, and general interaction patterns. This helps us understand how people use Voicetree and where we can improve.
 
 **Account Information**: If you create an account, we store your email address to communicate with you about the product.
 
@@ -20,7 +20,7 @@ VoiceTree ("we", "our", "us") is committed to being transparent about how we han
 
 ## Third-Party Services
 
-We use the following third-party services to operate VoiceTree:
+We use the following third-party services to operate Voicetree:
 
 - **Soniox** for speech-to-text transcription ([Soniox Privacy Policy](https://soniox.com/privacy))
 - **Google Gemini** for AI processing ([Google Privacy Policy](https://policies.google.com/privacy))
@@ -38,4 +38,4 @@ Questions about this policy? Reach out at admin@voicetree.io
 
 ---
 
-_This policy may be updated as VoiceTree evolves. We'll notify users of significant changes._
+_This policy may be updated as Voicetree evolves. We'll notify users of significant changes._

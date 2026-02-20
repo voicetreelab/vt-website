@@ -2,7 +2,6 @@
 title: "The Complexity Threshold: Why Your AI Agent Produces Gold or Garbage"
 description: LLMs have a sharp complexity threshold - below it they produce magic, above it pure slop. Learn to recognize the "Claude ego spiral" anti-pattern and use practical complexity budgeting to keep your AI agents productive.
 priority: 4
-draft: true
 ---
 
 Last month I watched 50 commits roll in while I made dinner. Claude was crushing it on a refactor I'd been dreading. Two days later, I rolled back every single one.
@@ -106,4 +105,4 @@ Make these checks habitual. Create a checklist for every coding session. The age
 
 ---
 
-*Related: [[LLMs as Pattern Mappers]] - the mental model that explains why complexity thresholds exist.*
+*Related: [[blog/llms-as-pattern-mappers|LLMs as Pattern Mappers]] - the mental model that explains why complexity thresholds exist.*

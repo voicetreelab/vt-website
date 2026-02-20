@@ -125,4 +125,4 @@ The mental model of LLMs as pattern mappers has saved me countless hours of debu
 
 ---
 
-*Next: [[blog/Complexity Threshold|The Complexity Threshold]] - why agents produce gold or garbage, nothing in between.*
+*Next: [[blog/complexity-threshold|The Complexity Threshold]] - why agents produce gold or garbage, nothing in between.*

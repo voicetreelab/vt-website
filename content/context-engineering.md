@@ -6,9 +6,9 @@ description: An infinite canvas for orchestrating coding agents. You architect, 
 ## An infinite canvas for orchestrating coding agents
 ### You architect, agents build.
 
-![](https://youtu.be/h_JtlkDhNTI)
+![Voicetree demo: orchestrating coding agents on an infinite canvas](https://youtu.be/h_JtlkDhNTI)
 
-Join the private beta [here](https://forms.gle/H4sWKnWqZNRjWNkp6)
+[Download Voicetree](/download) — free and open source
 
 ### The Problem
 
@@ -26,7 +26,7 @@ Long, complex tasks make agents unpredictable. Simple, isolated tasks make them 
 
 Voicetree lets you break work into subtasks: what needs to happen, in what order, and what can run in parallel. Each agent gets one clear job. When agents are reliable, their outputs become building blocks — you assemble massive projects fractally from tiny tasks.
 
-![](https://www.youtube.com/watch?v=iXeDANaM60E)
+![Voicetree divide and conquer: breaking complex tasks into parallel subtasks for agents](https://www.youtube.com/watch?v=iXeDANaM60E)
 
 ### Transparent Orchestration
 
@@ -43,4 +43,4 @@ Agents can do this for you automatically. They spawn their own subagents. In oth
 
 Contact us at hello@voicetree.io
 
-[Join the private beta](https://forms.gle/H4sWKnWqZNRjWNkp6)
+[Download Voicetree](/download)

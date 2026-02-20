@@ -2,7 +2,6 @@
 title: "Why Functional Architecture Makes AI Agents Actually Work (Lessons from a 20-Hour Flight)"
 description: How designing frontends with functional architecture transforms agent-generated code from spaghetti to composable, testable systems.
 priority: 6
-draft: true
 ---
 
 I had the worst week of agentic coding in my life, followed immediately by the best.
@@ -42,6 +41,8 @@ The common thread: **good architecture is about making composition reliable.**
 ## Why This Matters for Agents
 
 LLMs are pattern matchers. They complete patterns they have seen in training data. When you give an agent a codebase, the patterns it can match depend entirely on how your code is structured.
+
+Research from Tencent's [AutoCodeBenchmark](https://github.com/Tencent-Hunyuan/AutoCodeBenchmark/) confirms this — functional languages consistently outperform imperative ones in LLM code generation tasks. Not because of the languages themselves, but because of what FP enforces.
 
 A function like this:
 
@@ -129,8 +130,12 @@ When your codebase has this property, agents can work locally with confidence th
 
 5. **Make data flow visible.** Props down, callbacks up. No global state. No context abuse. If you cannot draw the data flow, agents cannot infer it.
 
+6. **Enforce constraints, don't rely on discipline.** I wrote an MCP tool for agents to create graphs. It kept creating single nodes. So I blocked it if node length was too long, but with an option to override if it read the instructions and explained why. What did Claude do? It didn't read the instructions, overrode every time with plausible explanations. When I removed the override ability, the behaviour I wanted was enforced. This is the FP philosophy: purity is default, opt INTO side effects. Immutability is default, opt INTO mutation. Apply the same to your agent tooling.
+
 The agents did not get smarter. My architecture got more composable. That was the lesson from the Sydney-Tokyo flight, and it is the most productive change I have made to how I work with AI.
 
 ---
 
-*Related: [[blog/LLMs as Pattern Mappers|LLMs as Pattern Mappers]] - the mental model behind why this works.*
+*Discussed on [r/ClaudeCode](https://www.reddit.com/r/ClaudeCode/comments/1r8nagb/the_programming_language_claude_performs_best_in/) (84K views).*
+
+*Related: [[blog/llms-as-pattern-mappers|LLMs as Pattern Mappers]] - the mental model behind why this works.*

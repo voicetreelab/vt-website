@@ -42,12 +42,68 @@ const softwareApplicationSchema = {
   }
 }
 
+// Extract plain text from a hast node recursively
+function extractTextContent(node: any): string {
+  if (!node) return ""
+  if (node.type === "text") return node.value || ""
+  if (node.children && Array.isArray(node.children)) {
+    return node.children.map(extractTextContent).join("")
+  }
+  return ""
+}
+
+// Build FAQPage JSON-LD schema from hast tree (h3 = question, following content = answer)
+function buildFaqSchema(tree: any, pageUrl: string): object | null {
+  const children = tree?.children
+  if (!Array.isArray(children)) return null
+
+  const faqItems: { question: string; answer: string }[] = []
+  let i = 0
+
+  while (i < children.length) {
+    const node = children[i]
+    if (node.type === "element" && node.tagName === "h3") {
+      const question = extractTextContent(node).trim()
+      const answerParts: string[] = []
+      i++
+      while (i < children.length) {
+        const next = children[i]
+        if (next.type === "element" && /^h[1-3]$/.test(next.tagName)) break
+        const text = extractTextContent(next).trim()
+        if (text) answerParts.push(text)
+        i++
+      }
+      if (question && answerParts.length > 0) {
+        faqItems.push({ question, answer: answerParts.join(" ") })
+      }
+    } else {
+      i++
+    }
+  }
+
+  if (faqItems.length === 0) return null
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map((item) => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer,
+      },
+    })),
+  }
+}
+
 export default (() => {
   const Head: QuartzComponent = ({
     cfg,
     fileData,
     externalResources,
     ctx,
+    tree,
   }: QuartzComponentProps) => {
     const titleSuffix = cfg.pageTitleSuffix ?? ""
     const isHomepage = fileData.slug === "index"
@@ -124,6 +180,7 @@ export default (() => {
         <link rel="icon" type="image/png" sizes="32x32" href={joinSegments(baseDir, "static/favicon-32x32.png")} />
         <link rel="icon" href={iconPath} />
         <meta name="description" content={description} />
+        <link rel="canonical" href={socialUrl} />
         <meta name="generator" content="Quartz" />
 
         {/* JSON-LD Structured Data for SEO and AI Search */}
@@ -135,6 +192,15 @@ export default (() => {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
+        {fileData.slug === "blog/more/FAQ" && (() => {
+          const faqSchema = buildFaqSchema(tree, socialUrl)
+          return faqSchema ? (
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+          ) : null
+        })()}
 
         {css.map((resource) => CSSResourceToStyleElement(resource, true))}
         {js

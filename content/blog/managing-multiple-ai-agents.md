@@ -105,4 +105,4 @@ Six agents feels manageable when they're locations on a map. It feels overwhelmi
 
 ---
 
-*Related: [[90-percent-token-reduction|How We Achieved 90% Token Reduction]] - the context engineering that makes shared workspaces possible. And [[Complexity Threshold]] - keeping each agent under the threshold that produces good work.*
+*Related: [[90-percent-token-reduction|How We Achieved 90% Token Reduction]] - the context engineering that makes shared workspaces possible. And [[complexity-threshold|Complexity Threshold]] - keeping each agent under the threshold that produces good work.*
