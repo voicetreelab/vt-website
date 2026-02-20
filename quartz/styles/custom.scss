@@ -382,35 +382,53 @@
 // ═══════════════════════════════════════════════════════════════════════
 
 body[data-slug="index"] {
-  // Right sidebar stays hidden on homepage
+  // Collapse empty page-header margin (no ArticleTitle/Breadcrumbs on homepage)
+  .page-header {
+    margin-top: 0 !important;
+  }
+
+  // Right sidebar hidden
   #quartz-body .sidebar.right {
     display: none !important;
   }
 
-  // Single-column grid with sidebar-left as top row (like mobile layout)
+  // Single-column grid — no sidebar columns
   #quartz-body {
-    grid-template-columns: auto !important;
-    grid-template-rows: auto auto auto auto !important;
+    grid-template-columns: 1fr !important;
     grid-template-areas:
-      "grid-sidebar-left"
       "grid-header"
       "grid-center"
       "grid-footer" !important;
   }
 
-  // Left sidebar: horizontal top bar with logo + hamburger (like mobile)
+  // Left sidebar: zero-size invisible container.
+  // Keeps the explorer DOM alive for JS toggle mechanics,
+  // but takes no visual space. The hamburger is fixed-positioned
+  // into the navbar area instead.
   #quartz-body .sidebar.left {
-    position: sticky !important;
-    height: unset !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    gap: 0 !important;
-    padding: 1rem 0 !important;
-    margin: 0;
-    background-color: var(--light);
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    background: transparent !important;
+    z-index: 100;
   }
 
-  // Force hamburger button visible at all screen sizes on homepage
+  // Hide page title/logo — Kate's Navbar already has branding
+  .page-title-container {
+    display: none !important;
+  }
+
+  // Make room for hamburger in the navbar
+  .navbar-inner {
+    padding-left: 3.5rem !important;
+  }
+
+  // Force hamburger visible at all screen sizes
   .explorer button.mobile-explorer {
     display: flex !important;
   }
@@ -420,67 +438,56 @@ body[data-slug="index"] {
     display: none;
   }
 
-  // Explorer: mobile-like overlay behavior at all screen sizes
-  .explorer {
-    order: -1;
-    height: initial;
-    overflow: hidden;
-    flex-shrink: 0;
-    align-self: flex-start;
-    margin-top: auto;
-    margin-bottom: auto;
+  // Hamburger: fixed-position into the navbar area
+  .explorer .mobile-explorer {
+    position: fixed !important;
+    top: 14px;
+    left: 16px;
+    z-index: 101;
+    margin: 0;
+    padding: 5px;
 
-    &.collapsed {
-      flex: 0 0 34px;
-
-      & > .explorer-content {
-        transform: translateX(-100vw);
-        visibility: hidden;
-      }
-    }
-
-    &:not(.collapsed) {
-      flex: 0 0 34px;
-
-      & > .explorer-content {
-        transform: translateX(0);
-        visibility: visible;
-      }
-    }
-
-    .explorer-content {
-      box-sizing: border-box;
-      z-index: 100;
-      position: absolute;
-      top: 0;
-      left: 0;
-      margin-top: 0;
-      background-color: var(--light);
-      max-width: 100vw;
-      width: 100vw;
-      transform: translateX(-100vw);
-      transition:
-        transform 200ms ease,
-        visibility 200ms ease;
-      overflow: hidden;
-      padding: 4rem 0 2rem 0;
-      height: 100dvh;
-      max-height: 100dvh;
-      visibility: hidden;
-    }
-
-    .mobile-explorer {
-      margin: 0;
-      padding: 5px;
-      z-index: 101;
-
-      .lucide-menu {
-        stroke: var(--darkgray);
-      }
+    .lucide-menu {
+      stroke: var(--darkgray);
     }
   }
 
-  // Hide Quartz site footer on homepage — links already in closing CTA + .homepage-links
+  // Explorer side panel at all screen sizes
+  .explorer {
+    &.collapsed > .explorer-content {
+      transform: translateX(-280px);
+      visibility: hidden;
+    }
+
+    &:not(.collapsed) > .explorer-content {
+      transform: translateX(0);
+      visibility: visible;
+    }
+  }
+
+  .explorer .explorer-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100dvh;
+    max-height: 100dvh;
+    z-index: 100;
+    background-color: var(--light);
+    border-right: 1px solid var(--lightgray);
+    box-shadow: 4px 0 16px rgba(0, 0, 0, 0.08);
+    transform: translateX(-280px);
+    transition:
+      transform 200ms ease,
+      visibility 200ms ease;
+    visibility: hidden;
+    padding: 4rem 1.2rem 2rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+    margin-top: 0;
+  }
+
+  // Hide Quartz site footer on homepage
   footer {
     display: none !important;
   }
