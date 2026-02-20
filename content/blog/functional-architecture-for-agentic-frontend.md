@@ -20,7 +20,7 @@ The backend code that worked well with agents had three properties:
 
 1. **Everything was a function.** Services took inputs, returned outputs. No hidden state mutations.
 2. **Types constrained the space.** The signature `processOrder(order: Order): Result<Receipt, OrderError>` tells you almost everything you need to know.
-3. **Impurity was pushed to the edges.** Database calls, API requests, logging - all at the boundaries. The core was pure logic.
+3. **Impurity was pushed to the edges.** Database calls, API requests, logging, all at the boundaries. The core was pure logic.
 
 My frontend code had none of these. Components rendered based on five different sources of state. Effects triggered other effects. The "type" of a component was whatever React felt like passing it that day.
 
@@ -42,7 +42,7 @@ The common thread: **good architecture is about making composition reliable.**
 
 LLMs are pattern matchers. They complete patterns they have seen in training data. When you give an agent a codebase, the patterns it can match depend entirely on how your code is structured.
 
-Research from Tencent's [AutoCodeBenchmark](https://github.com/Tencent-Hunyuan/AutoCodeBenchmark/) confirms this — functional languages consistently outperform imperative ones in LLM code generation tasks. Not because of the languages themselves, but because of what FP enforces.
+Research from Tencent's [AutoCodeBenchmark](https://github.com/Tencent-Hunyuan/AutoCodeBenchmark/) confirms this: functional languages consistently outperform imperative ones in LLM code generation tasks. Not because of the languages themselves, but because of what FP enforces.
 
 A function like this:
 
@@ -102,7 +102,7 @@ The component signature tells you exactly what it needs. No hidden dependencies.
 
 Effects and state live in a few clearly defined places. The rest of the app is pure functions reacting to that state.
 
-This is not a new architecture. It is functional reactive programming, applied consistently. What is new is realizing that this architecture is not just "cleaner" - it is *necessary* for agents to work reliably.
+This is not a new architecture. It is functional reactive programming, applied consistently. What is new is realizing that this architecture is not just "cleaner"; it is *necessary* for agents to work reliably.
 
 ## Connection to Context Engineering
 
@@ -120,7 +120,7 @@ When your codebase has this property, agents can work locally with confidence th
 
 ## Practical Takeaways
 
-1. **Push impurity to the edges.** API calls, state management, effects - all at the boundaries. Core logic is pure functions.
+1. **Push impurity to the edges.** API calls, state management, effects, all at the boundaries. Core logic is pure functions.
 
 2. **Type everything explicitly.** Types are free documentation that agents can read. `Result<T, E>` is better than throwing exceptions. Union types beat boolean flags.
 

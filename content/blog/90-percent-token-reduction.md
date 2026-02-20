@@ -79,6 +79,6 @@ The benchmarks are clear: long context isn't working. The alternative is structu
 
 ---
 
-*Voicetree is building tools for context engineering — managing what information LLMs see and when. [Watch the demo](https://youtu.be/h_JtlkDhNTI) or [download it here](/download) — it's free and open source.*
+*Voicetree is building tools for context engineering: managing what information LLMs see and when. [Watch the demo](https://youtu.be/h_JtlkDhNTI) or [download it here](/download). It's free and open source.*
 
 *Related: [[from-rag-to-pag|From RAG to PAG]] - the paradigm shift from retrieval to pruning.*

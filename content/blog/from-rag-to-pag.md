@@ -40,7 +40,7 @@ When you flatten this into chunks and retrieve by similarity, you destroy the st
 
 ## PAG: Pruning Instead of Retrieving
 
-Pruning-Augmented Generation takes a different approach. Instead of retrieving chunks, it navigates structure. We call it PAG because the core operation is *pruning* irrelevant branches while preserving structure—the inverse of RAG's additive retrieval.
+Pruning-Augmented Generation takes a different approach. Instead of retrieving chunks, it navigates structure. We call it PAG because the core operation is *pruning* irrelevant branches while preserving structure: the inverse of RAG's additive retrieval.
 
 The process:
 1. Convert content into a hierarchical tree (we call this a Voicetree)
@@ -106,4 +106,4 @@ The future isn't longer context windows. It's structured context that preserves 
 
 ---
 
-If you're interested in exploring PAG for your applications, we're building this into Voicetree. [Download it here](/download) — it's free and open source.
+If you're interested in exploring PAG for your applications, we're building this into Voicetree. [Download it here](/download). It's free and open source.

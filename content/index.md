@@ -1,6 +1,8 @@
 ---
-title: Voicetree — The Spatial IDE for Multi-Agent Orchestration
+title: Voicetree - The Spatial IDE for Multi-Agent Orchestration
 hideGraph: true
+aliases:
+  - home
 description: Save your project memories as a network of Markdown files. Delegate any node to AI, it will operate inside the graph as native terminal and share your memory.
 ---
 

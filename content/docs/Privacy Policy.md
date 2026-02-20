@@ -30,7 +30,7 @@ These providers process data according to their own privacy policies. We recomme
 
 ## Data Retention
 
-We currently do not store your voice recordings or mind map content on our servers beyond what is necessary to provide the service. This may change as we develop new features—we will update this policy and notify users of any significant changes.
+We currently do not store your voice recordings or mind map content on our servers beyond what is necessary to provide the service. This may change as we develop new features; we will update this policy and notify users of any significant changes.
 
 ## Contact
 

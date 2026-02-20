@@ -33,8 +33,8 @@ Voicetree provides this through voice-controlled mindmapping where you launch AI
 
 ### Practical Advice
 
-- **One feature at a time** — your brain isn't built to multi-task. Only allow parallelization within a single task, not across unrelated features.
-- **Subagent validation loop** — the parent agent reviews each subagent's work. If satisfied, it closes the subagent. If there are issues or tech debt, it leaves the subagent open so you can navigate to it and redirect with a sentence or two of guidance.
-- **Fresh context over long sessions** — when an agent gets stuck, spawn a new session with previous work as context plus your new instruction. This alleviates context rot rather than forcing through with more automation.
+- **One feature at a time:** your brain isn't built to multi-task. Only allow parallelization within a single task, not across unrelated features.
+- **Subagent validation loop:** the parent agent reviews each subagent's work. If satisfied, it closes the subagent. If there are issues or tech debt, it leaves the subagent open so you can navigate to it and redirect with a sentence or two of guidance.
+- **Fresh context over long sessions:** when an agent gets stuck, spawn a new session with previous work as context plus your new instruction. This alleviates context rot rather than forcing through with more automation.
 
 **Related:** [[managing-multiple-ai-agents|Managing Multiple AI Agents]]

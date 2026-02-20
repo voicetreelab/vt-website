@@ -30,6 +30,6 @@ Voicetree started out as a productivity tool for knowledge workers. It was desig
 	- Started incorporating graph traversal algorithms for even fewer LLM calls.
 
 
-- Late 2025: These two breakthroughs converged. The spatial canvas that helped humans organize their thinking turned out to be exactly what coding agents needed too — a shared, navigable graph of project context. Voicetree became a spatial IDE for multi-agent orchestration: you architect the work on the canvas, agents build inside it, each one transparent and controllable in its own terminal.
+- Late 2025: These two breakthroughs converged. The spatial canvas that helped humans organize their thinking turned out to be exactly what coding agents needed too: a shared, navigable graph of project context. Voicetree became a spatial IDE for multi-agent orchestration: you architect the work on the canvas, agents build inside it, each one transparent and controllable in its own terminal.
 
-- Today: Voicetree is [open source on GitHub](https://github.com/voicetreelab/voicetree/) and available as a free download. The vision is the same as day one — externalize your working memory so you can focus on what matters — but now that memory is shared between you and your agents.
+- Today: Voicetree is [open source on GitHub](https://github.com/voicetreelab/voicetree/) and available as a free download. The vision is the same as day one: externalize your working memory so you can focus on what matters. Now that memory is shared between you and your agents.

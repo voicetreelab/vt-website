@@ -46,4 +46,4 @@ curl -fsSL https://raw.githubusercontent.com/voicetreelab/voicetree/main/install
 
 ---
 
-Need help? [Join our Discord](https://discord.gg/r2ZBtJ9zvk) or email us at hello@voicetree.io. Feedback is immensely valuable — shoot us your thoughts, criticisms, or feature requests.
+Need help? [Join our Discord](https://discord.gg/r2ZBtJ9zvk) or email us at hello@voicetree.io. Feedback is immensely valuable. Shoot us your thoughts, criticisms, or feature requests.
