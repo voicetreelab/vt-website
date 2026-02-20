@@ -1,0 +1,517 @@
+@use "./variables.scss" as *;
+
+// ═══════════════════════════════════════════════════════════════════════
+//  HOMEPAGE
+// ═══════════════════════════════════════════════════════════════════════
+
+.homepage {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+
+  // Hide Quartz's auto-injected anchor icons and external-link SVGs
+  h1, h2, h3, h4, h5, h6 {
+    > a[role="anchor"],
+    > a[href^="#"],
+    > a.internal {
+      display: none;
+    }
+  }
+
+  .external-icon {
+    display: none;
+  }
+
+  // ── Hero ──────────────────────────────────────────────────────────
+  .hero {
+    text-align: center;
+    padding: 4rem 0 1.5rem;
+    position: relative;
+
+    h1 {
+      font-family: var(--headerFont);
+      font-size: clamp(2.2rem, 5.5vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      color: var(--dark);
+      margin: 0 auto 1rem;
+      max-width: 700px;
+    }
+
+    .hero-subtitle {
+      font-family: var(--bodyFont);
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--darkgray);
+      margin: 0 auto 2rem;
+      letter-spacing: 0.01em;
+
+      span {
+        color: #d4b96b;
+        font-style: normal;
+        font-weight: 500;
+      }
+    }
+
+    .hero-supporting {
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: var(--darkgray);
+      max-width: 520px;
+      margin: -0.5rem auto 2rem;
+      text-align: center;
+    }
+  }
+
+  // ── GIF Container ─────────────────────────────────────────────────
+  .gif-container {
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    position: relative;
+    background: var(--lightgray);
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  // ── CTA Buttons ───────────────────────────────────────────────────
+  .cta-group {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+
+    a {
+      padding: 0.65rem 1.5rem;
+      border-radius: 8px;
+      font-family: var(--headerFont);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+    }
+
+    .cta-primary {
+      background: #1d1d1d;
+      color: #fff;
+      border: 2px solid #1d1d1d;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .github-stars {
+      .star-count {
+        font-family: var(--codeFont);
+        font-size: 0.82rem;
+        color: #d4b96b;
+      }
+
+      svg {
+        color: #d4b96b;
+      }
+    }
+
+    .cta-outline {
+      background: transparent;
+      color: var(--dark);
+      border: 2px solid var(--darkgray);
+
+      &:hover {
+        background: var(--highlight);
+      }
+    }
+  }
+
+  // ── Section Labels ────────────────────────────────────────────────
+  .section-label {
+    font-family: var(--headerFont);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gray);
+    text-align: center;
+    margin-bottom: 0.6rem;
+  }
+
+  // ── Why Voicetree? Bento Grid ─────────────────────────────────────
+  .why-section {
+    padding: 4.5rem 0 3rem;
+
+    h2 {
+      font-family: var(--headerFont);
+      font-size: clamp(1.4rem, 3vw, 1.8rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-align: center;
+      color: var(--dark);
+      margin-bottom: 0.4rem;
+    }
+
+    .why-sub {
+      font-size: 0.95rem;
+      color: var(--darkgray);
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  .bento-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+
+    @media all and ($mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .bento-card {
+    padding: 1.6rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    background: #f7f7f7;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    position: relative;
+    overflow: hidden;
+
+    // Colored top accent line
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 1.5rem;
+      right: 1.5rem;
+      height: 1px;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  // Light mode accent lines & SVG colors
+  .card-amber  { &::before { background: linear-gradient(90deg, #b89a4a, transparent 70%); } .card-svg { color: #b89a4a; } }
+  .card-blue   { &::before { background: linear-gradient(90deg, #5a8ab4, transparent 70%); } .card-svg { color: #5a8ab4; } }
+  .card-green  { &::before { background: linear-gradient(90deg, #4a8a5a, transparent 70%); } .card-svg { color: #4a8a5a; } }
+  .card-purple { &::before { background: linear-gradient(90deg, #8a5ab4, transparent 70%); } .card-svg { color: #8a5ab4; } }
+
+  .card-icon-row {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .card-svg {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+  }
+
+  .bento-card:hover .card-svg {
+    opacity: 0.8;
+  }
+
+  .card-challenge {
+    font-family: var(--bodyFont);
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--gray);
+    line-height: 1.4;
+  }
+
+  .card-title {
+    font-family: var(--headerFont);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .card-desc {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: var(--darkgray);
+    margin: 0;
+  }
+
+  // ── Philosophy Quote ──────────────────────────────────────────────
+  .philosophy {
+    padding: 5rem 0;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gray), transparent);
+    }
+
+    &::before { top: 0; }
+    &::after { bottom: 0; }
+
+    .philosophy-quote {
+      font-family: var(--headerFont);
+      font-size: clamp(1.25rem, 2.8vw, 1.7rem);
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.55;
+      color: var(--darkgray);
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+      position: relative;
+
+      &::before {
+        content: '\201C';
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 4rem;
+        font-style: normal;
+        color: var(--gray);
+        position: absolute;
+        top: -1.5rem;
+        left: -1.5rem;
+        line-height: 1;
+        opacity: 0.4;
+      }
+    }
+  }
+
+  // ── Demo Video Section ────────────────────────────────────────────
+  .demo-section {
+    padding: 2rem 0 4rem;
+
+    .demo-title {
+      font-size: 0.72rem;
+      margin-bottom: 2rem;
+    }
+
+    .gif-container {
+      margin-bottom: 0.75rem;
+    }
+
+    .video-caption {
+      font-size: 0.82rem;
+      color: var(--gray);
+      text-align: center;
+      font-style: italic;
+    }
+  }
+
+  // ── Testimonial ───────────────────────────────────────────────────
+  .testimonial {
+    padding: 3rem 0;
+
+    .testimonial-card {
+      background: var(--highlight);
+      border: 1px solid rgba(0, 0, 0, 0.07);
+      border-radius: 16px;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      position: relative;
+
+      @media all and ($mobile) {
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    .testimonial-marks {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 5rem;
+      line-height: 1;
+      color: #d4b96b;
+      opacity: 0.25;
+      position: absolute;
+      top: 1rem;
+      left: 2rem;
+      pointer-events: none;
+    }
+
+    .testimonial-text {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--dark);
+      font-style: italic;
+      max-width: 540px;
+      margin: 0 auto 1.5rem;
+      position: relative;
+    }
+
+    .testimonial-author {
+      font-family: var(--headerFont);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--darkgray);
+      letter-spacing: 0.03em;
+    }
+  }
+
+  // ── FAQ Accordion (details/summary) ───────────────────────────────
+  .faq-section {
+    padding: 3.5rem 0 4rem;
+
+    .faq-title {
+      font-size: 0.72rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  .faq-list {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--lightgray);
+
+    &:first-child {
+      border-top: 1px solid var(--lightgray);
+    }
+
+    // The summary (question)
+    summary.faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 0;
+      cursor: pointer;
+      font-family: var(--headerFont);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--dark);
+      transition: color 0.2s;
+      list-style: none;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &::marker {
+        display: none;
+        content: '';
+      }
+
+      // Plus icon via ::after
+      &::after {
+        content: '+';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1px solid var(--lightgray);
+        flex-shrink: 0;
+        font-size: 1.1rem;
+        line-height: 1;
+        color: var(--darkgray);
+        transition: all 0.2s ease;
+      }
+
+      &:hover {
+        color: #d4b96b;
+      }
+    }
+
+    // Answer area
+    .faq-answer {
+      padding: 0 0 1.3rem;
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: var(--darkgray);
+    }
+
+    // Open state
+    &[open] {
+      summary.faq-question::after {
+        content: '\2212'; // minus sign
+        border-color: #d4b96b;
+        color: #d4b96b;
+      }
+    }
+  }
+
+  // ── Closing CTA Banner ────────────────────────────────────────────
+  .closing-cta {
+    text-align: center;
+    padding: 2.5rem 2rem;
+    background: #1d1d1d;
+    border-radius: 16px;
+    margin: 2rem 0 1.5rem;
+
+    @media all and ($mobile) {
+      padding: 2rem 1rem;
+
+      .cta-group {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    h3 {
+      color: #fff;
+      margin: 0 0 1rem;
+      font-size: 1.4rem;
+      font-weight: 800;
+    }
+
+    .cta-primary {
+      background: #fff;
+      color: #1d1d1d;
+      border-color: #fff;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    .cta-outline {
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.35);
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.08);
+      }
+    }
+  }
+
+  // ── Footer Links ──────────────────────────────────────────────────
+  .homepage-links {
+    text-align: center;
+    padding: 1rem 0 2.5rem;
+    font-size: 0.85rem;
+    color: var(--gray);
+
+    a {
+      color: var(--gray);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--dark);
+      }
+    }
+  }
+}

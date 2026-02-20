@@ -1,0 +1,115 @@
+// ═══════════════════════════════════════════════════════════════════════
+//  HOMEPAGE LAYOUT -- Remove empty right sidebar, expand content area
+// ═══════════════════════════════════════════════════════════════════════
+
+body[data-slug="index"] {
+  // Collapse empty page-header margin (no ArticleTitle/Breadcrumbs on homepage)
+  .page-header {
+    margin-top: 0 !important;
+  }
+
+  // Right sidebar hidden
+  #quartz-body .sidebar.right {
+    display: none !important;
+  }
+
+  // Single-column grid -- no sidebar columns
+  #quartz-body {
+    grid-template-columns: 1fr !important;
+    grid-template-areas:
+      "grid-header"
+      "grid-center"
+      "grid-footer" !important;
+  }
+
+  // Left sidebar: zero-size invisible container.
+  // Keeps the explorer DOM alive for JS toggle mechanics,
+  // but takes no visual space. The hamburger is fixed-positioned
+  // into the navbar area instead.
+  #quartz-body .sidebar.left {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    background: transparent !important;
+    z-index: 100;
+  }
+
+  // Hide page title/logo -- Kate's Navbar already has branding
+  .page-title-container {
+    display: none !important;
+  }
+
+  // Make room for hamburger in the navbar
+  .navbar-inner {
+    padding-left: 3.5rem !important;
+  }
+
+  // Force hamburger visible at all screen sizes
+  .explorer button.mobile-explorer {
+    display: flex !important;
+  }
+
+  // Prevent flash of explorer-content before JS initializes
+  .explorer .hide-until-loaded ~ .explorer-content {
+    display: none;
+  }
+
+  // Hamburger: fixed-position into the navbar area
+  .explorer .mobile-explorer {
+    position: fixed !important;
+    top: 14px;
+    left: 16px;
+    z-index: 101;
+    margin: 0;
+    padding: 5px;
+
+    .lucide-menu {
+      stroke: var(--darkgray);
+    }
+  }
+
+  // Explorer side panel at all screen sizes
+  .explorer {
+    &.collapsed > .explorer-content {
+      transform: translateX(-280px);
+      visibility: hidden;
+    }
+
+    &:not(.collapsed) > .explorer-content {
+      transform: translateX(0);
+      visibility: visible;
+    }
+  }
+
+  .explorer .explorer-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100dvh;
+    max-height: 100dvh;
+    z-index: 100;
+    background-color: var(--light);
+    border-right: 1px solid var(--lightgray);
+    box-shadow: 4px 0 16px rgba(0, 0, 0, 0.08);
+    transform: translateX(-280px);
+    transition:
+      transform 200ms ease,
+      visibility 200ms ease;
+    visibility: hidden;
+    padding: 4rem 1.2rem 2rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+    margin-top: 0;
+  }
+
+  // Hide Quartz site footer on homepage
+  footer {
+    display: none !important;
+  }
+}
