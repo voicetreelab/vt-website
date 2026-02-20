@@ -21,7 +21,7 @@ VoiceTree started out as a productivity tool for knowledge workers. It was desig
 - Mid 2025: the first breakthrough. As I started experimenting more and more with coding agents, I realised the VoiceTree system was the exact tool I was missing to better organise multiple agents in parallel, working on different parts of my codebase at once.
 	- Agents localized in space, on a 2d canvas, documenting their progress on a VoiceTree are much more easy to keep track of.  
 	- All the context from what you have been saying out loud becomes the prompts to run your agents on. Right click on a node, run agent, add some instructions on top. That's so much lower friction than having to type out a prompt with all your context from scratch.
-	- the UI is open source on github: https://github.com/voicetreelab/voicetree-ui
+	- the source code is available on github: https://github.com/voicetreelab/voicetree
 	
 
 - July 2025: the second breakthrough. If humans benefit from representing the context they are working on as an abstraction graph, would agents too? YES!

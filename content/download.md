@@ -5,7 +5,7 @@ description: Download Voicetree for macOS (Apple Silicon & Intel), Windows, and 
 
 # Download Voicetree
 
-Thanks for joining the early access program! Choose your platform below.
+Choose your platform below.
 
 ---
 
@@ -48,6 +48,4 @@ curl -fsSL https://raw.githubusercontent.com/voicetreelab/voicetree/main/install
 
 ---
 
-Need help? Reach out to us at founder@voicetree.io
-
-Since we are in early access, feedback is immensely valuable to us. Shoot us an email with any thoughts, criticisms or feature requests.
+Need help? [Join our Discord](https://discord.gg/r2ZBtJ9zvk) or email us at hello@voicetree.io. Feedback is immensely valuable — shoot us your thoughts, criticisms, or feature requests.
