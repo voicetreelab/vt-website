@@ -9,18 +9,15 @@ interface NavLink {
 
 interface NavbarOptions {
   links: NavLink[]
-  ctaLabel: string
-  ctaHref: string
+  cta?: NavLink
 }
 
 const defaultOptions: NavbarOptions = {
   links: [
     { label: "Blog", href: "/blog" },
     { label: "Docs", href: "/docs" },
-    { label: "Download", href: "/download" },
   ],
-  ctaLabel: "Join Beta",
-  ctaHref: "https://forms.gle/QiEU84pMDoVmx2xu8",
+  cta: { label: "Download", href: "/download" },
 }
 
 export default ((opts?: Partial<NavbarOptions>) => {
@@ -48,14 +45,15 @@ export default ((opts?: Partial<NavbarOptions>) => {
                 {link.label}
               </a>
             ))}
-            <a
-              href={options.ctaHref}
-              class="navbar-cta"
-              target="_blank"
-              rel="noopener"
-            >
-              {options.ctaLabel}
-            </a>
+            {options.cta && (
+              <a
+                href={options.cta.external ? options.cta.href : joinSegments(baseDir, options.cta.href)}
+                class="navbar-cta"
+                {...(options.cta.external ? { target: "_blank", rel: "noopener" } : {})}
+              >
+                {options.cta.label}
+              </a>
+            )}
           </div>
         </div>
       </nav>
@@ -151,7 +149,7 @@ a.navbar-cta:hover {
   color: #111;
 }
 
-/* Mobile: hide text links, keep logo + CTA */
+/* Mobile: hide text links, keep logo + Download */
 @media all and (max-width: 800px) {
   .navbar-inner {
     padding: 0.6rem 1rem;
