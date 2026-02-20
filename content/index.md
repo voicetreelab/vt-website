@@ -3,7 +3,7 @@ title: Voicetree - A Graph View You Actually Work Within
 hideGraph: true
 aliases:
   - home
-description: The graph holds your memory so you don't have to. Agents spawn agents. You see and steer every one.
+description: The graph holds your memory so you don't have to. Agents spawn agents. Watch from above, zoom into where you are needed.
 ---
 
 <div class="homepage">
@@ -12,7 +12,7 @@ description: The graph holds your memory so you don't have to. Agents spawn agen
 # A graph view you<br>actually work within
 
 <p class="hero-subtitle"><span>Obsidian</span> meets <span>Claude Code</span></p>
-<p class="hero-supporting">The graph holds your memory so you don't have to.<br>Agents spawn agents. You see and steer every one.</p>
+<p class="hero-supporting">The graph holds your memory so you don't have to.<br>Agents spawn agents. Watch from above, zoom into where you are needed.</p>
 
 <div class="cta-group">
 <a class="cta-primary github-stars" href="https://github.com/voicetreelab/voicetree/"><span>Github</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1.5L9.79 5.12L13.81 5.71L10.905 8.53L11.58 12.52L8 10.63L4.42 12.52L5.095 8.53L2.19 5.71L6.21 5.12L8 1.5Z" fill="currentColor"></path></svg><span class="star-count">656</span></a>
