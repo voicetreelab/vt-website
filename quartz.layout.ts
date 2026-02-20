@@ -15,7 +15,7 @@ const explorerFilterFn = (node: any) => {
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  header: [],
+  header: [Component.Navbar()],
   afterBody: [Component.Darkmode()],
   footer: Component.Footer({
     links: {
