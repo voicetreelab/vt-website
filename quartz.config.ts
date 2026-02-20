@@ -12,7 +12,10 @@ const config: QuartzConfig = {
     pageTitleSuffix: " - Voicetree",
     enableSPA: true,
     enablePopovers: true,
-    analytics: null,
+    analytics: {
+      provider: "google",
+      tagId: "G-GG6L2GPVLN",
+    },
     locale: "en-US",
     baseUrl: "voicetree.io",
     ignorePatterns: ["private", "templates", ".obsidian", "ctx-nodes", "1765506538578mFZ.md"],
