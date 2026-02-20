@@ -16,7 +16,7 @@ const explorerFilterFn = (node: any) => {
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [Component.Darkmode()],
   footer: Component.Footer({
     links: {},
   }),
@@ -69,7 +69,6 @@ export const defaultContentPageLayout: PageLayout = {
           Component: Component.Search(),
           grow: true,
         },
-        { Component: Component.Darkmode() },
       ],
     }),
     Component.Explorer({ sortFn: explorerSortFn, filterFn: explorerFilterFn, homeLink: true }),
@@ -102,7 +101,6 @@ export const defaultListPageLayout: PageLayout = {
           Component: Component.Search(),
           grow: true,
         },
-        { Component: Component.Darkmode() },
       ],
     }),
     Component.Explorer({ sortFn: explorerSortFn, filterFn: explorerFilterFn, homeLink: true }),

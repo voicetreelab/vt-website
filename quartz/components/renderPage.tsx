@@ -298,5 +298,8 @@ export function renderPage(
     </html>
   )
 
-  return "<!DOCTYPE html>\n" + render(doc)
+  // Force dark mode in server-rendered HTML to prevent FOWT (Flash of Wrong Theme).
+  // The <html> element needs saved-theme="dark" before CSS applies, but Preact's
+  // render-to-string strips non-standard attributes, so we inject it post-render.
+  return "<!DOCTYPE html>\n" + render(doc).replace("<html ", '<html saved-theme="dark" ')
 }
