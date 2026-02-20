@@ -4,12 +4,12 @@ import * as Component from "./quartz/components"
 // Filter function for Explorer - hides tags and specific blog posts
 // Note: Must be self-contained (no external variables) because it's serialized to client
 const explorerFilterFn = (node: any) => {
-  const hiddenSlugs = new Set([
+  const hiddenSlugs = [
     "blog/90-percent-token-reduction",
     "blog/From-RAG-to-PAG",
     "blog/Managing-Multiple-AI-Agents",
-  ])
-  return node.slugSegment !== "tags" && !(node.isFolder ? false : hiddenSlugs.has(node.slug))
+  ]
+  return node.slugSegment !== "tags" && !(node.isFolder ? false : hiddenSlugs.indexOf(node.slug) !== -1)
 }
 
 // components shared across all pages
@@ -18,7 +18,12 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [Component.Darkmode()],
   footer: Component.Footer({
-    links: {},
+    links: {
+      GitHub: "https://github.com/voicetreelab",
+      Discord: "https://discord.gg/r2ZBtJ9zvk",
+      "X/Twitter": "https://x.com/voicetreeio",
+      Email: "mailto:hello@voicetree.io",
+    },
   }),
 }
 
@@ -63,21 +68,9 @@ export const defaultContentPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-      ],
-    }),
     Component.Explorer({ sortFn: explorerSortFn, filterFn: explorerFilterFn, homeLink: true }),
   ],
   right: [
-    Component.ConditionalRender({
-      component: Component.Graph(),
-      condition: (page) => page.fileData.frontmatter?.hideGraph !== true,
-    }),
     Component.ConditionalRender({
       component: Component.DesktopOnly(Component.TableOfContents()),
       condition: (page) => page.fileData.slug !== "index",
@@ -95,14 +88,6 @@ export const defaultListPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-      ],
-    }),
     Component.Explorer({ sortFn: explorerSortFn, filterFn: explorerFilterFn, homeLink: true }),
   ],
   right: [],
