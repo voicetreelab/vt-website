@@ -33,7 +33,7 @@ PageTitle.css = `
 
 .page-logo {
   width: 100%;
-  max-width: 120px;
+  max-width: clamp(80px, 20vw, 120px);
   height: auto;
   object-fit: contain;
   background: transparent;
