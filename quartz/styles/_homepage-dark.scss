@@ -7,11 +7,6 @@
     color: #f5d547;
   }
 
-  .gif-container {
-    border-color: rgba(255, 255, 255, 0.08);
-    background: #252528;
-  }
-
   .bento-card {
     background: #1a1a1d;
     border-color: rgba(255, 255, 255, 0.06);
@@ -111,6 +106,15 @@
     }
 
     .github-stars {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--dark);
+      border-color: rgba(255, 255, 255, 0.2);
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.14);
+        opacity: 1;
+      }
+
       .star-count {
         color: #d4b96b;
       }

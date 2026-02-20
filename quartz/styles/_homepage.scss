@@ -25,7 +25,7 @@
   // ── Hero ──────────────────────────────────────────────────────────
   .hero {
     text-align: center;
-    padding: 4rem 0 1.5rem;
+    padding: 3rem 0 1.5rem;
     position: relative;
 
     h1 {
@@ -35,16 +35,16 @@
       line-height: 1.08;
       letter-spacing: -0.035em;
       color: var(--dark);
-      margin: 0 auto 1rem;
+      margin: 0 auto 0.75rem;
       max-width: 700px;
     }
 
     .hero-subtitle {
       font-family: var(--bodyFont);
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-style: italic;
       color: var(--darkgray);
-      margin: 0 auto 2rem;
+      margin: 0 auto 0.9rem;
       letter-spacing: 0.01em;
 
       span {
@@ -59,23 +59,23 @@
       line-height: 1.65;
       color: var(--darkgray);
       max-width: 520px;
-      margin: -0.5rem auto 2rem;
+      margin: 0 auto 1.5rem;
       text-align: center;
     }
   }
 
   // ── GIF Container ─────────────────────────────────────────────────
   .gif-container {
-    border-radius: 16px;
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.12);
     overflow: hidden;
     position: relative;
-    background: var(--lightgray);
 
     img {
       width: 100%;
       height: auto;
       display: block;
+      margin: 0;
     }
   }
 
@@ -85,7 +85,7 @@
     gap: 0.75rem;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 1.5rem 0;
+    margin: 0.5rem 0 2rem;
 
     a {
       padding: 0.65rem 1.5rem;

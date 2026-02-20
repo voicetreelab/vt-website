@@ -11,7 +11,6 @@ description: The graph holds your memory so you don't have to. Agents spawn agen
 
 # A graph view you<br>actually work within
 
-<p class="hero-subtitle"><span>Obsidian</span> meets <span>Claude Code</span></p>
 <p class="hero-supporting">The graph holds your memory so you don't have to.<br>Agents spawn agents. Watch from above, zoom into where you are needed.</p>
 
 <div class="cta-group">
@@ -19,6 +18,7 @@ description: The graph holds your memory so you don't have to. Agents spawn agen
 <a class="cta-outline" href="/download">Download</a>
 </div>
 
+<p class="hero-subtitle"><span>Obsidian</span> meets <span>Claude Code</span></p>
 <div class="gif-container">
 <img src="/static/gifs/core_loop_only_agents.gif" alt="Voicetree agent orchestration - agents spawning and working on a shared graph">
 </div>
@@ -31,23 +31,35 @@ description: The graph holds your memory so you don't have to. Agents spawn agen
 <p class="why-sub">Every challenge multi-agent users face, solved by design.</p>
 
 <div class="bento-grid">
-<div class="bento-card card-yellow">
+<div class="bento-card card-amber">
+<div class="card-icon-row">
+<svg class="card-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
 <p class="card-challenge">Agents don't know what you know</p>
+</div>
 <h4 class="card-title">Shared Memory</h4>
 <p class="card-desc">Never remind agents of any context. They read it from the graph automatically.</p>
 </div>
-<div class="bento-card card-neutral">
+<div class="bento-card card-blue">
+<div class="card-icon-row">
+<svg class="card-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
 <p class="card-challenge">4-10 terminals is overwhelming</p>
+</div>
 <h4 class="card-title">Spatial Navigation</h4>
 <p class="card-desc">Jump back in and it's exactly how you left it. Spatial memory does the recall for you.</p>
 </div>
 <div class="bento-card card-green">
+<div class="card-icon-row">
+<svg class="card-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><line x1="12" y1="8" x2="6" y2="14"/><line x1="12" y1="8" x2="18" y2="14"/></svg>
 <p class="card-challenge">Manual agent coordination</p>
+</div>
 <h4 class="card-title">Recursive Decomposition</h4>
 <p class="card-desc">AI breaks big tasks into subgraphs and spawns parallel subagents on the dependency graph.</p>
 </div>
-<div class="bento-card card-pink">
+<div class="bento-card card-purple">
+<div class="card-icon-row">
+<svg class="card-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18.178 8c5.096 0 5.096 8 0 8-5.095 0-5.095-8 0-8z"/><path d="M5.822 8c-5.096 0-5.096 8 0 8 5.095 0 5.095-8 0-8z"/></svg>
 <p class="card-challenge">Long sessions rot context</p>
+</div>
 <h4 class="card-title">Infinite Context, Zero Rot</h4>
 <p class="card-desc">The graph grows indefinitely. Agents get short, focused sessions with only what's relevant.</p>
 </div>
