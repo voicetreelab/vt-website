@@ -1,5 +1,5 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
-import { pathToRoot, joinSegments } from "../util/path"
+import { pathToRoot, joinSegments, FullSlug } from "../util/path"
 
 interface NavLink {
   label: string
@@ -24,7 +24,7 @@ export default ((opts?: Partial<NavbarOptions>) => {
   const options = { ...defaultOptions, ...opts }
 
   const Navbar: QuartzComponent = ({ fileData, cfg }: QuartzComponentProps) => {
-    const baseDir = pathToRoot(fileData.slug!)
+    const baseDir = pathToRoot(fileData.slug! as FullSlug)
     const logoPath = joinSegments(baseDir, "static/logo-hand-clean.png")
     const title = cfg?.pageTitle ?? "Voicetree"
 
