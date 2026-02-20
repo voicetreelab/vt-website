@@ -3,8 +3,6 @@ title: Download Voicetree
 description: Download Voicetree for macOS (Apple Silicon & Intel), Windows, and Linux. Install via Homebrew or direct download.
 ---
 
-# Download Voicetree
-
 Choose your platform below.
 
 ---

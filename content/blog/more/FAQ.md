@@ -3,8 +3,6 @@ title: Frequently Asked Questions
 description: Common questions about Voicetree - the interactive graph-view for orchestrating coding agents. Learn about context engineering, voice mode, agent orchestration, supported coding agents, API cost reduction, and how Voicetree improves AI coding workflows.
 ---
 
-## Frequently Asked Questions
-
 ### What is Voicetree?
 
 Voicetree is an interactive graph-view where nodes are either markdown notes or terminal-based agents (Claude Code, Codex, Gemini, etc.). Agents live inside the graph next to their tasks, see nearby nodes as context, and can spawn subagents onto the graph. It's Obsidian meets Claude Code — built for efficient human-AI collaboration.
