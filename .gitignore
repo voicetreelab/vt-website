@@ -24,3 +24,11 @@ test-screenshot.png
 test-site.mjs
 *.new
 *.bak
+
+# Vector DB (not content)
+chromadb_data/
+content/chromadb_data/
+
+# VoiceTree workspaces
+voicetree-*/
+

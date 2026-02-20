@@ -28,7 +28,3 @@ VoiceTree started out as a productivity tool for knowledge workers. It was desig
 	- Store a full chat history as a VoiceTree, for any new question, give the LLM only the node summaries, and ask it what nodes it would like to have the full content of.
 	- Early experiments on the [GSM-infinite](https://arxiv.org/abs/2502.05252)benchmark showed promise. On the medium difficulty datasets, agents given a VoiceTree of GSM datasets were able to read 85% less content, and still achieve the correct answer,. I was busy making my algorithm more robust to be able to handle  the 16k, and 32k token hard datasets. 
 	- Started incorporating graph traversal algorithms for even less LLM calls.
-
-
-
-The third breakthrough: LLM training data. (WIP)
