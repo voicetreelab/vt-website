@@ -79,6 +79,92 @@
     }
   }
 
+  // ── Section Divider ───────────────────────────────────────────────
+  .section-divider {
+    border: none;
+    height: 1px;
+    max-width: 120px;
+    margin: 1.8rem auto 1.5rem;
+    background: linear-gradient(90deg, transparent, var(--gray), transparent);
+  }
+
+  // ── Agent Logo Strip ──────────────────────────────────────────────
+  .agent-strip {
+    margin: 1.2rem auto 0;
+    text-align: center;
+  }
+
+  .agent-strip-label {
+    font-family: var(--bodyFont);
+    font-size: 0.7rem;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.28);
+    margin-bottom: 10px;
+  }
+
+  .agent-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+
+  .agent-logo {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    opacity: 0.32;
+    transition: opacity 0.3s ease;
+    cursor: default;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    span {
+      font-family: var(--bodyFont);
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--dark);
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+
+    &.agent-logo-any {
+      opacity: 0.18;
+
+      &:hover {
+        opacity: 0.35;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .agent-logos {
+      gap: 20px 24px;
+    }
+
+    .agent-logo {
+      svg {
+        width: 17px;
+        height: 17px;
+      }
+
+      span {
+        font-size: 0.72rem;
+      }
+    }
+  }
+
   // ── CTA Buttons ───────────────────────────────────────────────────
   .cta-group {
     display: flex;
@@ -149,7 +235,7 @@
 
   // ── Why Voicetree? Bento Grid ─────────────────────────────────────
   .why-section {
-    padding: 4.5rem 0 3rem;
+    padding: 2.5rem 0 3rem;
 
     h2 {
       font-family: var(--headerFont);

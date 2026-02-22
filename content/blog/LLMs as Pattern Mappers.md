@@ -1,7 +1,7 @@
 ---
 position:
-  x: 4295
-  y: 1205
+  x: 5318
+  y: 1234
 isContextNode: false
 description: "A practical framework for understanding what LLMs can and cannot do, and how to convert hard problems into tasks they can solve reliably."
 priority: 3
