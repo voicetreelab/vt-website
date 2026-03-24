@@ -6,10 +6,6 @@ priority: 7
 
 Voicetree started out as a productivity tool for knowledge workers. It was designed to encourage a system of work called "Voice Work", where you speak your decision and problem solving process out loud. The Voicetree would allow you to externalize your short term memory, decreasing cognitive load, thereby allowing you to stay in the flow state longer, and solve harder problems.
 
-- Early 2024, work on Voicetree commenced after being frustrated with the extent of context you have to manage for software engineering. It was too easy to lose track, drop the 5 balls you were juggling, and in defeat check slack. Too much time was spent figuring out what to do, not doing. 
-	- Early trials of the 'Voice Work' system (saying everything you were doing out loud, code pairing, but with yourself) showed great promise, noticeably increasing productivity.
-
-
 - August, 2024: Submitted a proof of concept of Voicetree to the Gemini competition: https://ai.google.dev/competition/projects/voicetree 
 	- Video demo: https://www.youtube.com/watch?v=O4ikwKYQMTE
 
